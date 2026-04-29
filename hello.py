@@ -1,1 +1,1 @@
-print("Hello world, just for\n Testing purposes")
+print("Hello world, just for\nTesting purposes")
