@@ -12,7 +12,7 @@ public class Main {
 
           try {
 
-            System.out.println("==|Wellcome to calculator|==");
+            System.out.println("==|Welcome to calculator|==");
 
             System.out.println("1, Addition,\n2, Subtraction,\n3, Division,\n4, Multiplication,\n5, Exit");
             System.out.print("Choose option: ");
@@ -31,7 +31,15 @@ public class Main {
                     addi.show(a, b);
                     break;
                 case 2:
-                    Subtraction.main(args);
+                    System.out.println("---This is Subtraction section---");
+
+                    System.out.print("Enter first number: ");
+                    double subs = Double.parseDouble(sc.nextLine());
+
+                    System.out.print("Enter second number: ");
+                    Double subs1 = Double.parseDouble(sc.nextLine());
+
+                    sub.show(subs, subs1);
                     break;
                 case 3:
                     //Division.main(args);
@@ -46,7 +54,15 @@ public class Main {
                     div.show(num, num2);
                     break;
                 case 4:
-                    Multiplication.main(args);
+                    System.out.println("---This is Multiplication section---");
+
+                    System.out.print("Enter first number: ");
+                    double dou = Double.parseDouble(sc.nextLine());
+
+                    System.out.print("Enter second number: ");
+                    double dou1 = Double.parseDouble(sc.nextLine());
+
+                    mul.show(dou, dou1);
                     break;
                 case 5:
                     System.out.println("Thank you for using calculator");
