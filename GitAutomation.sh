@@ -13,7 +13,7 @@ git_automation() {
     git commit -m 'Updating files!'
     echo "[+]Pushing to the, origin main!"
     git push origin main
-    echo "[+]Pulling origin main and rebasing!."
+    echo "[+]Pulling origin main and rebasing!"
     git pull --rebase origin main
 }
 git_automation
