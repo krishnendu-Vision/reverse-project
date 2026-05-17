@@ -1,6 +1,8 @@
 git_automation() {
     echo "[+]Navigating to the directory...!"
     cd /data/data/com.termux/files/home/reverse-project
+    echo "[+]Printing directory path"
+    pwd
     echo "[+]Listing files and directories!"
     ls
     echo "[+]Waiting for two seconds..!"
