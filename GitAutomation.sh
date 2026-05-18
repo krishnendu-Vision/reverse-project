@@ -9,14 +9,15 @@ git_automation() {
     echo "[+]Listing files and directories!"
     ls
     echo "[+]Waiting for two seconds..!"
-    sleep 2 
-    echo "[+]Pulling origin main and rebasing!"
-    git pull --rebase origin main
+    sleep 2
     echo "[+]Adding all files!"
     git add .
     echo "[+]Adding commit message!"
     git commit -m 'Updating files!'
     echo "[+]Pushing to the, origin main!"
     git push origin main
+    echo "[+]Pulling origin main and rebasing!"
+    git pull --rebase origin main
+    echo "[+]Copy done at $(date)" >> /data/data/com.termux/files/home/git_log.txt
 }
 git_automation
