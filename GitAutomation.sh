@@ -1,3 +1,6 @@
+#!/bin/bash
+set -e
+
 git_automation() {
     echo "[+]Navigating to the directory...!"
     cd /data/data/com.termux/files/home/reverse-project
