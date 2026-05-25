@@ -1,8 +1,9 @@
 import java.util.Scanner;
 //Written by Krishnendu Chakraborty
 public class Main {
+    public static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+       //public static Scanner sc = new Scanner(System.in);
         Addition addi = new Addition();
         Subtraction sub = new Subtraction();
         Division div = new Division();
@@ -28,7 +29,7 @@ public class Main {
                     double b = Double.parseDouble(sc.nextLine());
 
                     addi.show(a, b);
-                    yield "Case one successfully completed!";
+                    yield "Addition successfully completed!";
                 }
                 case 2 -> {
                     System.out.println("---This is Subtraction section---");
@@ -40,8 +41,8 @@ public class Main {
                     Double subs1 = Double.parseDouble(sc.nextLine());
 
                     sub.show(subs, subs1);
-                    yield "Case two successfully completed!";
-                }
+                    yield "Subtraction successfully completed!";
+            }
                 case 3 -> {
                     //Division.main(args);
                     System.out.println("\n---This is division section---\n");
@@ -53,7 +54,7 @@ public class Main {
                     double num2 = Double.parseDouble(sc.nextLine());
 
                     div.show(num, num2);
-                    yield "Case three successfully completed!";
+                    yield "Division successfully completed!";
                 }
                 case 4 -> {
                     System.out.println("---This is Multiplication section---");
@@ -65,11 +66,11 @@ public class Main {
                     double dou1 = Double.parseDouble(sc.nextLine());
 
                     mul.show(dou, dou1);
-                    yield "Case four successfully completed!";
+                    yield "Multiplication successfully completed!";
                 }
                 case 5 -> {
                     System.out.println("Thank you for using calculator!");
-                    yield "Case five successfully completed!";
+                    yield "program exited successfully!";
                 }
                 default -> {
                     yield "Invalid option selected!";
