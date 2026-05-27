@@ -8,8 +8,9 @@ public class Main {
         Subtraction sub = new Subtraction();
         Division div = new Division();
         Multiplication mul = new Multiplication();
+        boolean running = true;
 
-        while (true) {
+        while (running) {
 
           try {
 
@@ -17,10 +18,10 @@ public class Main {
 
             System.out.println("1, Addition,\n2, Subtraction,\n3, Division,\n4, Multiplication,\n5, Exit");
             System.out.print("Choose option: ");
-            int option = Integer.parseInt(sc.nextLine());
+            String option = sc.nextLine();
 
-           String status = switch (option) {
-                case 1 ->  {                  System.out.println("---This is addition section---");
+           int statusCode = switch (option) {
+                case "1" ->  {                  System.out.println("---This is addition section---");
 
                     System.out.print("Enter first number: ");
                     double a = Double.parseDouble(sc.nextLine());
@@ -29,9 +30,9 @@ public class Main {
                     double b = Double.parseDouble(sc.nextLine());
 
                     addi.show(a, b);
-                    yield "Addition successfully completed!";
+                    yield 1;
                 }
-                case 2 -> {
+                case "2" -> {
                     System.out.println("---This is Subtraction section---");
 
                     System.out.print("Enter first number: ");
@@ -41,9 +42,9 @@ public class Main {
                     Double subs1 = Double.parseDouble(sc.nextLine());
 
                     sub.show(subs, subs1);
-                    yield "Subtraction successfully completed!";
+                    yield 1;
             }
-                case 3 -> {
+                case "3" -> {
                     //Division.main(args);
                     System.out.println("\n---This is division section---\n");
 
@@ -54,9 +55,9 @@ public class Main {
                     double num2 = Double.parseDouble(sc.nextLine());
 
                     div.show(num, num2);
-                    yield "Division successfully completed!";
+                    yield 1;
                 }
-                case 4 -> {
+                case "4" -> {
                     System.out.println("---This is Multiplication section---");
 
                     System.out.print("Enter first number: ");
@@ -66,17 +67,21 @@ public class Main {
                     double dou1 = Double.parseDouble(sc.nextLine());
 
                     mul.show(dou, dou1);
-                    yield "Multiplication successfully completed!";
+                    yield 1;
                 }
-                case 5 -> {
-                    System.out.println("Thank you for using calculator!");
-                    yield "program exited successfully!";
+                case "5" -> {
+                    System.out.println("Thank you for using calculator");
+                    yield -1;
                 }
                 default -> {
-                    yield "Invalid option selected!";
+                    System.out.println("Invalid choice");
+                    yield 0;
                 }
             };
-              System.out.println(status);
+           System.out.println(statusCode);
+           if (statusCode == -1) {
+               running = false;
+           }
           } catch(NumberFormatException e) {
                 System.err.println("Please enter value only!");
           } 
