@@ -24,7 +24,7 @@ public class Main {
             int statusCode = switch (option) {
 
                 case "1" -> {
-                    System.out.println("---This is addition section---");
+                    System.out.println("\n---This is addition section---\n");
 
                     System.out.print("Enter first number: ");
                     double a = Double.parseDouble(sc.nextLine());
