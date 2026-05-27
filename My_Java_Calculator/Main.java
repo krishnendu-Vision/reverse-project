@@ -45,7 +45,7 @@ public class Main {
 
                     sub.show(subs, subs1);
                     yield 1;
-            }
+                }
                 case "3" -> {
                     //Division.main(args);
                     System.out.println("\n---This is division section---\n");
