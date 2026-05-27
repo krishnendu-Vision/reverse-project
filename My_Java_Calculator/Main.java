@@ -19,7 +19,8 @@ public class Main {
             System.out.println("1, Addition,\n2, Subtraction,\n3, Division,\n4, Multiplication,\n5, Exit");
             System.out.print("Choose option: ");
             String option = sc.nextLine();
-
+            
+            //Adding switch expressions.
             int statusCode = switch (option) {
 
                 case "1" -> {
@@ -84,6 +85,7 @@ public class Main {
            if (statusCode == -1) {
                running = false;
            }
+           //Catching wrong input format.
           } catch(NumberFormatException e) {
                 System.err.println("Please enter value only!");
           } 
