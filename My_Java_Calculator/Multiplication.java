@@ -4,7 +4,7 @@ public class Multiplication {
             System.err.println("Input one and two,\nshould contain value!.");
         }else {
         double result = mul1 * mul2;
-        System.out.println("Multiplication result: " + result);
+        System.out.println("\nMultiplication result: " + result + "\n");
         }
     }
 }
