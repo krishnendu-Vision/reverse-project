@@ -18,8 +18,8 @@ public class Main {
 
             System.out.println("1, Addition,\n2, Subtraction,\n3, Division,\n4, Multiplication,\n5, Exit");
             System.out.print("Choose option: ");
-            int option = Integer.parseInt(sc.nextLine());
-            
+
+            int option = Integer.parseInt(sc.nextLine());           
             //Adding switch expressions.
             String statusCode = switch (option) {
 
