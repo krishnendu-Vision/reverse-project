@@ -18,12 +18,12 @@ public class Main {
 
             System.out.println("1, Addition,\n2, Subtraction,\n3, Division,\n4, Multiplication,\n5, Exit");
             System.out.print("Choose option: ");
-            String option = sc.nextLine();
+            int option = Integer.parseInt(sc.nextLine());
             
             //Adding switch expressions.
-            int statusCode = switch (option) {
+            String statusCode = switch (option) {
 
-                case "1" -> {
+                case 1 -> {
                     System.out.println("\n---This is addition section---\n");
 
                     System.out.print("Enter first number: ");
@@ -33,9 +33,9 @@ public class Main {
                     double b = Double.parseDouble(sc.nextLine());
 
                     addi.show(a, b);
-                    yield 1;
+                    yield "1";
                 }
-                case "2" -> {
+                case 2 -> {
                     System.out.println("\n---This is Subtraction section---\n");
 
                     System.out.print("Enter first number: ");
@@ -45,9 +45,9 @@ public class Main {
                     Double subs1 = Double.parseDouble(sc.nextLine());
 
                     sub.show(subs, subs1);
-                    yield 1;
+                    yield "1";
                 }
-                case "3" -> {
+                case 3 -> {
                     //Division.main(args);
                     System.out.println("\n---This is division section---\n");
 
@@ -58,9 +58,9 @@ public class Main {
                     double num2 = Double.parseDouble(sc.nextLine());
 
                     div.show(num, num2);
-                    yield 1;
+                    yield "1";
                 }
-                case "4" -> {
+                case 4 -> {
                     System.out.println("\n---This is Multiplication section---\n");
 
                     System.out.print("Enter first number: ");
@@ -70,24 +70,25 @@ public class Main {
                     double dou1 = Double.parseDouble(sc.nextLine());
 
                     mul.show(dou, dou1);
-                    yield 1;
+                    yield "1";
                 }
-                case "5" -> {
+                case 5 -> {
                     System.out.println("Thank you for using calculator");
-                    yield -1;
+                    yield "-1";
                 }
                 default -> {
                     System.out.println("Invalid choice");
-                    yield 0;
+                    yield "0";
                 }
             };
            System.out.println(statusCode);
-           if (statusCode == -1) {
+           if (statusCode.equalsIgnoreCase("-1")) {
                running = false;
            }
            //Catching wrong input format.
           } catch(NumberFormatException e) {
                 System.err.println("Please enter value only!");
+                System.out.println(e.getMessage());
           } 
         }
     }
